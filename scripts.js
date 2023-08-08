@@ -24,22 +24,15 @@ if (country == "RSA" && price < 1000) {
 } else if (country == "NAM" && price < 1000) {
   currency = "$";
   shipping = 600;
-} else if (
-  country == "NAM" &&
-  currency == "$" &&
-  customers == 1 &&
-  price >= 1000
-) {
-  shipping = 0;
+} else if (country == "NAM" && customers == 1 && price >= 60) {
+currency = "$";
+shipping = 0;
 } else if (country == "NK") {
   console.log(BANNED_WARNING);
 } else {
   shipping == 800 && currency == "$";
 }
 
-if (price > 60 && currency == "$" && country == "NAM" && customers == 1) {
-  let shipping = 0;
-}
 
 if (shipping === 0 && customers !== 1) {
   console.log(FREE_WARNING);
