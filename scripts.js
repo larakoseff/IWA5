@@ -3,7 +3,7 @@ const BANNED_WARNING = "Unfortunately we do not ship to your country of residenc
 const NONE_SELECTED = "0";
 
 let customers = 1;
-let country = "RSA";
+let country = "NK";
 let currency = null;
 let shipping = null;
 
@@ -29,8 +29,12 @@ currency = "$";
 shipping = 0;
 } else if (country == "NK") {
   console.log(BANNED_WARNING);
+  currency = null;
+  shipping = null;
+  price = null;
 } else {
-  shipping == 800 && currency == "$";
+shipping = 800; 
+currency = "$";
 }
 
 
